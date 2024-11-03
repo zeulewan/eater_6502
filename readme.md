@@ -211,6 +211,8 @@ No new code.
 
 Code: [vid14_keyboard.s](vid14_keyboard.s)
 
+https://www.patreon.com/posts/4-bit-lcd-50900073
+
 ## Similar repositories
 
 <https://github.com/lukeshiner/6502_computer>
