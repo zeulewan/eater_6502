@@ -1,5 +1,7 @@
 # Build a 6502 computer
+
 Vids 1-12 by [Casey Dunn](https://github.com/caseywdunn)
+
 Vids 12 onwards by [Zeul](https://github.com/zeulewan/)
 
 ![casey](casey.jpg)
