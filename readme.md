@@ -97,12 +97,10 @@ To install minipro:
 
 
 ## Code for videos
-
 I've slightly modified some of the commands and code to have incremental
 versions of some of the programs he iterates on.
 
-### Video 1
-
+### Video 1 
 There are no commands for [video 1](https://www.youtube.com/watch?v=yl8vPW5hydQ).
 All the software is hardwired resistors.
 
@@ -110,12 +108,11 @@ All the software is hardwired resistors.
 
 
 ### Video 2
-
 Commands for [video 2](https://www.youtube.com/watch?v=yl8vPW5hydQ).
 
 First, the bin with just `ea` values.
 
-    python makerom_ea.py
+    python vid02_makerom_ea.py
     hexdump -C rom_ea.bin
     minipro -p AT28C256 -w rom_ea.bin
 
@@ -126,75 +123,68 @@ Now the full binary.
     minipro -p AT28C256 -w rom.bin
 
 ### Video 3
-
 Commands for [video 3](https://www.youtube.com/watch?v=oO8_2JJV0B4).
 
-    vasm6502_oldstyle -Fbin -dotdir blink.s
+    vasm6502_oldstyle -Fbin -dotdir vid03_blink.s
     hexdump -C a.out
     minipro -p AT28C256 -w a.out
 
 ### Video 4
-
 Commands for [video 4](https://www.youtube.com/watch?v=oO8_2JJV0B4).
 
-    vasm6502_oldstyle -Fbin -dotdir hello-world_vid04.s
+    vasm6502_oldstyle -Fbin -dotdir vid04_hello-world.s
     hexdump -C a.out
     minipro -p AT28C256 -w a.out
 
+Code: [vid04_helloworld.s](vid04_helloworld.s)
 
 ### Video 5
-
 Commands for [video 5](https://www.youtube.com/watch?v=xBjQVxVxOxc).
 
-
-    vasm6502_oldstyle -Fbin -dotdir hello-world_vid05.s
+    vasm6502_oldstyle -Fbin -dotdir vid05hello-world.s
     hexdump -C a.out
     minipro -p AT28C256 -w a.out
 
+Code: [vid05_helloworld.s](vid05_helloworld.s)
 
 ### Video 7
-
 Commands for [video 7](https://www.youtube.com/watch?v=omI0MrTWiMU).
 
-    vasm6502_oldstyle -Fbin -dotdir hello-world_vid07.s
+    vasm6502_oldstyle -Fbin -dotdir vid07_hello-world.s
     hexdump -C a.out
     minipro -p AT28C256 -w a.out
 
-## Video 8
+Code: [vid07_helloworld.s](vid07_helloworld.s)
 
+### Video 8
 [Why build an entire computer on breadboards?](https://youtu.be/fCbAafKLqC8)
-
 No new code.
 
-## Video 9
-
+### Video 9
 [How assembly language loops work](https://youtu.be/ZYJIakkcLYw)
+Code: [vid09_helloworld.s](vid09_helloworld.s)
 
-`hello-world_vid09.s`
-
-## Video 10
-
+### Video 10
 [Binary to decimal can’t be that hard, right?](https://youtu.be/v3-a-zqKfgA)
+At about 1:31 in the video, he shows a file I here call [vid10_42.s](vid10_42.s).
+Then at 19:10 in the video, he starts making edits for what I call [vid10_bin2dec.s](vid10_bin2dec.s). In the video, it is called `bin2dec.s`.
 
-At about 1:31 in the video, he shows a file I here call `vid10_42.s`.
-
-Then at 19:10 in the video, he starts making edits for what I call `vid10_bin2dec.s`. In the video, it is called `bin2dec.s`.
-
-
-## Video 11
-
+### Video 11
 [Hardware interrupts](https://youtu.be/DlEa8kd7n3Q)
+Code [vid11_interrupts.s](vid11_interrupt.s)
 
-The file he writes in this video is referred to here as `vid11_interrupts.s`.
-
-
-## Video 12
-
+### Video 12
 [Interrupt handling](https://youtu.be/oOYA-jsWTmc)
+Code: [vid12_interrupts.s](vid12_interrupts.s)
 
-Code is in `vid12_interrupts.s`.
+### Video 13
+[So how does a PS/2 keyboard interface work?](https://youtu.be/7aXbh9VUB3U)
+No new code.
 
+### Video 14
+[Keyboard interface hardware](https://youtu.be/7aXbh9VUB3U)
+Code: [vid14_keyboard.s](vid14_keyboard.s)
 
-### Similar repositories
+## Similar repositories
 
 <https://github.com/lukeshiner/6502_computer>
