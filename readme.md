@@ -1,7 +1,9 @@
 # Build a 6502 computer
+Vids 1-12 by [Casey Dunn](https://github.com/caseywdunn)
+Vids 12 onwards by [Zeul](https://github.com/zeulewan/)
 
-![My 6502](6502s.jpg)
-
+![casey](casey.jpg)
+![zeul](zeul.jpg)
 
 Files for my build of Ben Eater's excellent 6502 breadboard computer. More
 from him at https://eater.net/6502.
