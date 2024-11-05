@@ -4,8 +4,8 @@ Vids 1-12 by [Casey Dunn](https://github.com/caseywdunn)
 
 Vids 12 onwards by [Zeul](https://github.com/zeulewan/)
 
-![casey](casey.jpg)
-![zeul](zeul.jpg)
+![casey](media/casey.jpg)
+![zeul](media/zeul.jpg)
 
 Files for my build of Ben Eater's excellent 6502 breadboard computer. More
 from him at https://eater.net/6502.
@@ -99,6 +99,9 @@ To install minipro:
     make
     make install
 
+Command that zeul uses to compile, view and upload binary:
+
+    ./vasm6502_oldstyle -Fbin -dotdir helloworld.s && hexdump -C a.out &&  minipro -p 28C256 -uP -w a.out
 
 ## Code for videos
 
@@ -125,7 +128,7 @@ First, the bin with just `ea` values.
 
 Now the full binary.
 
-    python makerom.py
+    python vid02_makerom.py
     hexdump -C rom.bin
     minipro -p AT28C256 -w rom.bin
 
