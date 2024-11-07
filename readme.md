@@ -212,7 +212,7 @@ No new code.
 
 [Keyboard interface hardware](https://youtu.be/7aXbh9VUB3U)
 
-Code: [vid14_keyboard.s](vid14_keyboard.s)
+Code: [vid14_keyboard.s](vid14_keyboard/vid14_keyboard.s)
 
 https://www.patreon.com/posts/4-bit-lcd-50900073
 
