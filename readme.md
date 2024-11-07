@@ -212,6 +212,8 @@ No new code.
 
 [Keyboard interface hardware](https://youtu.be/7aXbh9VUB3U)
 
+Ben switches the LCD into 4 bit mode without telling us. He made a [patreon post](https://www.patreon.com/posts/4-bit-lcd-50900073) about it. Which you'll have to spend 3 bucks on.
+
 Code: [vid14_keyboard.s](vid14_keyboard/vid14_keyboard.s)
 
 https://www.patreon.com/posts/4-bit-lcd-50900073
