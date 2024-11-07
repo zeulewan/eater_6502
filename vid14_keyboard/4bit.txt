@@ -1,0 +1,62 @@
+4-bit LCD interface
+
+5 May 2021
+
+Many of you noticed that for the keyboard videos, I modified the LCD to operate in 4-bit mode, freeing up some IO lines to make the 8-bit keyboard interface possible. I’ve gotten a few messages from different people wondering how that works.
+
+The hardware part is pretty simple. Basically 4 bits of data plus the three control signals from the LCD are all connected to port B on the 6522. The 4 data bits are D4-D7 on the LCD and connected as follows. Pins D0-D3 on the LCD are now unused:
+
+LCD D4 - 6522 PB0 pin 10
+LCD D5 - 6522 PB1 pin 11
+LCD D6 - 6522 PB2 pin 12
+LCD D7 - 6522 PB3 pin 13
+
+The 3 control signals are also moved over to port B as follows:
+
+LCD RS - 6522 PB4 pin 14
+LCD RW - 6522 PB5 pin 15
+LCD E - 6522 PB6 pin 16
+
+This frees up all 8 bits of port A to use for the keyboard or whatever else.
+
+Here’s the code from the end of the last video, which includes all the LCD subroutines modified for 4-bit operation: https://eater.net/downloads/keyboard.s
+
+There’s a new subroutine, lcd_init, which puts the display into 4-bit mode. After that, all of the instructions and characters are sent to the LCD in two steps, 4 bits at a time. So you’ll see the lcd_instruction subroutine and print_char subroutine are both modified to do that. There is also a modified lcd_wait subroutine since checking the busy flag is a bit more complicated: The status register has to be read in two 4-bit chunks, even though we only care about one bit—the busy flag.
+
+But with those modified subroutines, everything else works pretty much the same. You still call the lcd_instruction and print_char subroutines with the 8-bit character or instruction in the A register, so the rest of your code doesn’t need to change.
+
+One thing that’s a little annoying is that now when you reset the CPU, the LCD might not reset properly. That’s because the lcd_init routine that puts it into 4-bit mode assumes the LCD just powered on and is in 8-bit mode. So if the LCD is already in 4-bit mode and you reset the CPU, the lcd_init will just cause everything else to get out of sync by 4 bits. The solution is to reset the CPU again to get it back in sync. So basically you’ll have to hit reset twice to actually reset it.
+
+Hope that helps!
+
+-Ben
+
+
+Comment: 
+
+Got it to work by adding  Set 8-bit mode 3 times before setting the 4-bit mode. My problem was after reset, the LCD got set  to 4-bit more but only 1 line mode, using the Enter key made the curser go off screen instead to the 2nd line it went to position 40 but on line 1.                            lcd_init:
+  lda #%00000011 ; 1st Set 8-bit mode
+  sta PORTB
+  ora #E
+  sta PORTB
+  and #%00001111
+  sta PORTB
+  lda #%00000011 ; 2nd Set 8-bit mode
+  sta PORTB
+  ora #E
+  sta PORTB
+  and #%00001111
+  sta PORTB
+  lda #%00000011 ; 3rd Set 8-bit mode
+  sta PORTB
+  ora #E
+  sta PORTB
+  and #%00001111
+  sta PORTB
+  lda #%00000010 ; Set 4-bit mode
+  sta PORTB
+  ora #E
+  sta PORTB
+  and #%00001111
+  sta PORTB
+  rts
