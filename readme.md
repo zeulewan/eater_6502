@@ -206,7 +206,7 @@ Code: [vid12_interrupts.s](vid12_interrupts.s)
 
 [So how does a PS/2 keyboard interface work?](https://youtu.be/7aXbh9VUB3U)
 
-No new code.
+I had to use a HC299 because home hardware ran out of HC595s
 
 ### Video 14
 
@@ -214,7 +214,20 @@ No new code.
 
 Ben switches the LCD into 4 bit mode without telling us. He made a [patreon post](https://www.patreon.com/posts/4-bit-lcd-50900073) about it. Which you'll have to spend 3 bucks on.
 
-Code: [vid14_keyboard.s](vid14_keyboard/vid14_keyboard.s)
+To do: fix the code when the PCB comes
+
+### Video 15
+
+[Keyboard interface software](https://youtu.be/dL0GO9SeBh0)
+
+Code: [vid15_keyboard.s](vid15_keyboard_software/vid15_keyboard.s)
+
+### Video 16
+
+[SPI: The serial peripheral interface](https://youtu.be/MCi7dCBhVpQ)
+
+Code up to minute 23. I never made loop or printed it to the LCD: [vid16_SPI1.s](vid16_SPI/vid16_SPI1.s)
+
 
 ## Similar repositories
 
