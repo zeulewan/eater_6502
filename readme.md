@@ -236,7 +236,7 @@ Code up to minute 23. I never made loop or printed it to the LCD: [vid16_SPI1.s]
 
 [one shot timer](vid17_timers/vid17_timers_t1_oneshot.s)
 
-[free rin timer](vid17_timers/vid17_timers_t1_freerun.s)
+[free run timer](vid17_timers/vid17_timers_t1_freerun.s)
 
 ## Similar repositories
 
