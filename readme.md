@@ -228,6 +228,15 @@ Code: [vid15_keyboard.s](vid15_keyboard_software/vid15_keyboard.s)
 
 Code up to minute 23. I never made loop or printed it to the LCD: [vid16_SPI1.s](vid16_SPI/vid16_SPI1.s)
 
+### Video 17
+
+[How do hardware timers work?](https://youtu.be/g_koa00MBLg)
+
+[Software timer](vid17_timers/vid17_timers_software.s)
+
+[one shot timer](vid17_timers/vid17_timers_t1_oneshot.s)
+
+[free rin timer](vid17_timers/vid17_timers_t1_freerun.s)
 
 ## Similar repositories
 
