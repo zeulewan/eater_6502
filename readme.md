@@ -238,6 +238,18 @@ Code up to minute 23. I never made loop or printed it to the LCD: [vid16_SPI1.s]
 
 [free run timer](vid17_timers/vid17_timers_t1_freerun.s)
 
+### Video 18
+
+[The RS-232 protocol](https://youtu.be/AHYNxpqKqwo)
+
+I bought [this](https://www.amazon.ca/dp/B01N67YK6U) cable.
+
+I use iterm2 with these commands to connect:
+
+    ls /dev/tty.usb*
+
+    screen /dev/tty.usbserial-BG00ENH3
+
 ## Similar repositories
 
 <https://github.com/lukeshiner/6502_computer>
