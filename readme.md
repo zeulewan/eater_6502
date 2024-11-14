@@ -250,6 +250,10 @@ I use iterm2 with these commands to connect:
 
     screen /dev/tty.usbserial-BG00ENH3
 
+[print x code](vid18_rs232/vid18_rs232_printx.s)
+
+[print characters code](vid18_rs232/vid18_rs232_printx.s)
+
 ## Similar repositories
 
 <https://github.com/lukeshiner/6502_computer>
