@@ -254,6 +254,8 @@ I use iterm2 with these commands to connect:
 
 [print characters code](vid18_rs232/vid18_rs232_printx.s)
 
+[MAX232 Datasheet](https://www.ti.com/lit/ds/symlink/max232.pdf?ts=1737910399194&ref_url=https%253A%252F%252Fwww.google.com%252F)
+
 ### Video 19
 
 [Let's build a voltage multiplier!](https://youtu.be/4alV5LzHLE4)
